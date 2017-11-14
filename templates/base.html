@@ -1,0 +1,220 @@
+{% load bootstrap3 %}
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>IP Rotate in Cloud</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Rubik" rel="stylesheet">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="http://code.jquery.com/jquery-2.1.4.min.js"></script>
+    <link rel="stylesheet" text = 'html/css' href="{% static 'css/style.css' %}" />
+
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="{% static 'js/scripts.js' %}" />
+    {# Load CSS and JavaScript #}
+    {% bootstrap_css %}
+    {% bootstrap_javascript %}
+    </head>
+<body>
+
+<div class="bar">
+    &nbsp;&nbsp;&nbsp;&nbsp;<img class="logo" src="http://svgshare.com/i/3o2.svg" style="margin-top:0px; width:80px; height:80%;display:inline-block;"><br>
+    <a style="color: yellow; font-size:15px;">IP Rotate in Cloud</a>
+</div>
+    <div class="pull-right right-panel" style="color: white; margin-top: -65px; margin-right: 10px;">&nbsp;
+        <span class="glyphicon glyphicon-envelope" aria-hidden="true"> </span>
+        <a href="mailto:iprotateincloud@zendesk.com" style="color: white;">&nbsp;support@rotateipincloud.zendesk.com</a>
+        &nbsp;&nbsp;
+        <span class="glyphicon glyphicon-shopping-cart pull-right right-panel" aria-hidden="true" style="color: white;padding:0px;">&nbsp;<a
+                style="color: white; font-size: 16px !important; " href="/contact/" target="_blank">Support</a></span>
+
+
+    </div>
+
+
+<br>
+
+
+
+    <nav class="navbar navbar-default navbar-custom" role="navigation">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+            <button type="button" data-target="#navbarCollapse" data-toggle="collapse" class="navbar-toggle">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+        </div>
+        <!-- Collection of nav links and other content for toggling -->
+        <div id="navbarCollapse" class="collapse navbar-collapse">
+            <ul class="nav navbar-nav">
+                <li {% if request.resolver_match.url_name == 'index' %}class="active"{% endif %}>
+                    <a href="/index/">Home</a>
+                </li>
+                <li {% if request.resolver_match.url_name == 'servers' %}class="active"{% endif %}>
+                    <a href="/servers/">Verizon IP Network Lines</a>
+                </li>
+                <li {% if request.resolver_match.url_name == 'numbers' %}class="active"{% endif %}>
+                    <a href="/numbers/">Verizon Forwarded Phone Numbers</a>
+                </li>
+                <li {% if request.resolver_match.url_name == 'pva' %}class="active"{% endif %}>
+                    <a href="/pva/">PVA (Phone Verified Accounts)</a>
+                </li>
+                <li {% if request.resolver_match.url_name == 'reseller' %}class="active"{% endif %}>
+                    <a href="/contact/">Reseller Portal</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+
+
+
+
+
+{% block content %}
+{% endblock %}
+<!--
+id="myBtn"
+-->
+
+<div class="subscription">
+	<div class="row">
+        <div class="span12">
+    		<div class="thumbnail center well well-small text-center">
+                <h2>Get Secret Sales, Posting Tips, and Social Promotion Techniques In Your Inbox</h2>
+                <p>Get FREE videos, posting tips and tricks, social list building and more every weekday in your inbox.</p>
+                <p>Monthly Contests for FREE <strong>rotateincloud.com</strong> Verizon credits and more!</p>
+                <form action="/subscription/" class="form-inline" method="POST">
+                    {% csrf_token %}
+                    <div class="input-prepend"><span class="add-on"><i class="icon-envelope"></i></span>
+                        Full Name <input class="form-control" type="text" id="full_name" name="full_name" placeholder="Your name" required> &nbsp;&nbsp; Email <input class="form-control" type="email" id="email" name="email" required placeholder="your@email.com">
+                    </div>
+                    <br />
+                    <button id="submit" type="submit" class="btn btn-large btn-warning" style="background-color:#fff731; color:black; border-color: blue;">Subscribe Now!</button>
+                </form>
+            </div>
+        </div>
+	</div>
+</div>
+
+
+
+  <!-- Modal -->
+  <div class="modal fade" id="myModal" role="dialog">
+    <div class="modal-dialog">
+
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title text-center">Registration successful</h4>
+        </div>
+        <div class="modal-body">
+          <p>Your registration was successful! In the future you will receive all the latest information and the best offers from our region</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+
+
+    <footer class="footer-section bg-with-black">
+        <br>
+        <div class="footer-top-section">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-3 col-sm-6 col-xs-12">
+                        <div class="single-fta">
+                            <img src="http://svgshare.com/i/3o2.svg" style="width: 100px;" alt="">
+                            <ul class="fta-list">
+                                <li><a href="/ServerRequest/" target="_blank" ><span class="glyphicon glyphicon-chevron-right"></span> Verizon IP Network Lines</a></li>
+                                <li><a href="#" target="_blank" ><span class="glyphicon glyphicon-chevron-right"></span> Verizon Wirelles Numbers</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-sm-6 col-xs-12">
+                        <div class="single-fta">
+                            <h3 class="fta-title">Development</h3>
+                            <ul class="fta-list">
+                                <li><a href="/Job/" target="_blank" ><i class="glyphicon glyphicon-chevron-right"></i> Request a Script</a></li>
+                                <li><a href="/Job/" target="_blank" ><i class="glyphicon glyphicon-chevron-right"></i> Web Design</a></li>
+                                <li><a href="/Job/" target="_blank" ><i class="glyphicon glyphicon-chevron-right"></i> Logo Design</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-sm-6 col-xs-12">
+                        <div class="single-fta">
+                            <h3 class="fta-title">Services</h3>
+                            <ul class="fta-list">
+                                <li><a href="/Job/" target="_blank" ><i class="glyphicon glyphicon-chevron-right"></i> Classified Posting</a></li>
+                                <li><a href="/Job/" target="_blank" ><i class="glyphicon glyphicon-chevron-right"></i> Backlinks</a></li>
+                                <li><a href="/Job/" target="_blank" ><i class="glyphicon glyphicon-chevron-right"></i> PVA (Phone Verified Accounts)</a></li>
+
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-sm-6 col-xs-12">
+                        <div class="single-fta">
+                            <h3 class="fta-title">Contact Us</h3>
+                            <ul class="fta-list">
+                                <li>Email: support@rotateincloud.com</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="col-md-3 col-sm-6 col-xs-12">
+                        <h3 class="fta-title"></h3>
+                       <h4 style="color: white">Bitcoin Accepted <img width="35px;" src="https://bitcoin.org/img/icons/opengraph.png" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom-area">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xs-12">
+                        <div class="footer-bottom">
+                            <div class="row">
+                                <div class="col-md-6 col-sm-12 col-xs-12">
+                                    <div class="fba-copyright">
+                                        <p>Copyright © 2017 IP Rotate in Cloud. All rights reserved.</p>
+                                    </div>
+                                </div>
+                                <div class="col-md-6 col-sm-12 col-xs-12">
+                                    <div class="fba-links">
+                                        <ul>
+                                            <li><a href="#">About</a></li>
+                                            <li><a href="/contact/" target="_blank" >Contact Us</a></li>
+                                            <li><a href="#" target="" >Term & Conditions</a></li>
+                                            <li><a href="#" target="" >Privacy Policy</a></li>
+                                            <li><a href="#" target="" >Sites Map</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+</body>
+</html>
+

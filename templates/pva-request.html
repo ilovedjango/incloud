@@ -1,0 +1,125 @@
+{% load static %}
+{% load bootstrap3 %}
+
+{% block content %}
+
+
+<!doctype html>
+<!--[if lt IE 7]><html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
+<!--[if IE 7]><html class="no-js lt-ie9 lt-ie8" lang="en"> <![endif]-->
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en"> <![endif]-->
+<!--[if IE 9 ]><html class="ie9 no-js"> <![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!--> <html class="no-js"> <!--<![endif]-->
+<head>
+
+    <!-- Basic page needs ================================================== -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+    <!-- Title and description ================================================== -->
+    <title>
+    Request a Server &ndash; rotateincloud.com
+    </title>
+
+    <meta name="description" content="">
+    <!-- Social meta ================================================== -->
+    <meta property="og:type" content="product">
+    <meta property="og:title" content="<h2>4g Verizon Line Network (4g-VLPN)</h2>">
+
+    <!-- Helpers ================================================== -->
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="theme-color" content="#e42c00">
+    <!-- CSS ================================================== -->
+        <link href="{% static 'css/theme.css' %}" rel="stylesheet" type="text/css" media="all" />
+    <link href="{% static 'css/style2.css' %}" rel="stylesheet" type="text/css" media="all" />
+    <link href="//fonts.googleapis.com/css?family=Cabin:500" rel="stylesheet" type="text/css" media="all" />
+    <link href="{% static 'css/style1.css' %}" rel="stylesheet" type="text/css" media="all" /><link href="//fonts.googleapis.com/css?family=Cabin:500" rel="stylesheet" type="text/css" media="all" />
+</head>
+
+<body id="4g Verizon Line Network (4g-VLPN)" class="template-product" >
+
+  <main class="wrapper main-content" role="main">
+      <br>
+      <br>
+    <div itemscope itemtype="http://schema.org/Product">
+<div style="color:red" class="text-center"><h1></h1></div>
+
+        {% if success %}
+            <div class="alert alert-success">
+                 <strong>Success, your message was sent!</strong>
+            </div>
+            <div class="col-md-12">
+        {% endif %}
+
+
+  <div class="product-single">
+    <div class="grid product-single__hero">
+      <div class="grid__item large--one-half">
+
+
+          <div class="product-single__photos" id="ProductPhoto">
+            <img src="https://s18.postimg.org/tcl4zk8rt/craigslist_pva_phone_verified_accounts.png" alt="PVA (Phone Verified Accounts)" id="ProductPhotoImg" data-image-id="18901770322">
+          </div>
+
+
+
+      </div>
+      <div class="grid__item large--one-half">
+
+        <h1 itemprop="name" content="PVA (Phone Verified Accounts) - 1+">PVA (Phone Verified Accounts)</h1>
+
+        <div itemprop="offers" itemscope itemtype="http://schema.org/Offer">
+
+          <meta itemprop="priceCurrency" content="USD">
+          <link itemprop="availability" href="http://schema.org/InStock">
+
+          <form action="/PvaRequest/" method="post" enctype="multipart/form-data" id="AddToCartForm">
+            {% csrf_token %}
+
+            <div class="product-customizer-options" data-product-id="7914595529" data-product-price="320" data-version="1.8.0">
+                <div class="product-customizer-option option-type-text option-required">
+                    <label for="7914595529_option_1">Email</label>
+                <div>
+                    <input type="text" id="email" name="email" maxlength="20" placeholder="Email" required="required"/></div>
+                </div>
+                <div class="product-customizer-option option-type-text option-required">
+                    <label for="7914595529_option_1">Skype ID</label>
+                <div>
+
+                <div class="product-customizer-option-description">So that we can contact you about your order.  If you don't use skype, write NO SKYPE</div>
+                    <input type="text" id="skypeid" name="skypeid" maxlength="20" placeholder="Skype ID" required="required"/></div>
+                </div>
+
+                <div class="product-customizer-option option-type-multiline " data-option-id="106288" data-product-option-id="844087" data-option-name="special-instructions"><label for="7914595529_option_2">Special Instructions</label>
+                <div>
+
+              <div class="product-customizer-option-description">Tell us anything special about delivery of your order</div>
+                    <textarea id="description" name="description" maxlength="" placeholder="Special Instructions" ></textarea></div></div>
+            </div>
+
+            <div id="shappify-qty-msg"></div>
+
+
+            <div class="product-single__quantity">
+              <label for="Quantity">Quantity</label>
+              <input type="number" id="Quantity" name="quantity" value="1" min="1" class="quantity-selector">
+            </div>
+
+            <button type="submit" name="add" id="AddToCart" class="btn">
+              <span id="requestpvaaccounts">Request PVA Accounts</span>
+            </button>
+          </form>
+
+
+          <div class="product-description rte" itemprop="description">
+            <p>*Bulk Verizon PVA* creation for any website SMS or Voice.  Verizon wireless phone numbers, combined with Gmail or Yahoo email for phone verified account creation.  You choose the cities using our portal; we will use content from other live ads to open the account for the best results.  PVA’s accounts will be guaranteed to be in good standing for 10 days and all PVA’s will be documented using the portal site and can be downloaded into csv format.  We are not responsible for accounts live rate.</p>
+            <p>We stock many popular PVA's in the portal for instant delivery.  PVA's we do not have in stock generally take 1-2 business days dependant on order size.</p>
+            <p><br>MINIMUM ORDER 50 PVA's</p>
+            <p> </p>
+          </div>
+
+            <br><br>
+
+
+
+{% endblock %}

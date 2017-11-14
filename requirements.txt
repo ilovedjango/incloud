@@ -1,0 +1,4 @@
+blockchain==1.4.0
+Django==1.7.3
+django-bootstrap3==9.1.0
+

@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html class=" is-responsive" lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta name="viewport" content="width=device-width"/>
+    <title>Get a offer</title>
+    <meta name="description" content="Post a Project on Freelancer to outsource your work today. Pick a Category, Write a description and receive bids on your project in moments!"/>
+    <meta name="robots" content="index, follow"/>
+    <meta name="robots" content="noodp"/>
+    <!-- css section -->
+    <link href="https://www.f-cdn.com/assets/css/js-plugins/jquery.fileupload-ui-4f6071c6.css" type="text/css" rel="stylesheet" />
+    <link href="https://www.f-cdn.com/assets/css/flux/base-bdc1aca8.css" type="text/css" rel="stylesheet" />
+    <link href="https://www.f-cdn.com/assets/css/flux/layout/PageLoggedOutPostProject-238cebf6.css" type="text/css" rel="stylesheet" />
+    <link href="https://www.f-cdn.com/assets/css/abtests/CTS-627/modules/AutofillDropdown-4e2eaa45.css" type="text/css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://www.f-cdn.com/assets/webapp-compat/styles.6bc7daea784d6e9483d7.bundle.css">
+    <!-- Font face handling for an FOFT rendering approach -->
+    <style>
+        /* Prevent FOIT */
+        .is-webfont-not-loaded body {
+            font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+            letter-spacing: -0.02em;
+        }
+
+        .is-webfont-subset body {
+            font-family: 'RobotoSubset', 'Roboto', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+        }
+    </style>
+
+  </head>
+  <body>
+
+
+
+
+<section>
+    <div class="pinky-template">
+        <div id="main" class="main-content" aria-label="Content">
+
+    <section class="PagePostProject">
+    <div class="PagePostProject-container Container">
+        <header class="PagePostProject-header">
+            <br><br>
+            <h1 class="PagePostProject-header-title">Tell us what you need done</h1>
+        </header>
+
+        {% if success %}
+            <div class="alert alert-success">
+                 <strong>Success, your message was sent!</strong>
+            </div>
+            <div class="col-md-12">
+
+            {% else %}
+            nothing
+        {% endif %}
+
+        <form id="project-form" class="fl-form PagePostProject-form" action="/Job/" method="POST" enctype="multipart/form-data">
+            {% csrf_token %}
+    <ol class="NumberedForm">
+        <li class="is-active">
+            <div class="NumberedForm-content">
+                <fieldset class="PagePostProject-fieldset">
+                    <legend class="PagePostProject-legend">Choose a name for your project</legend>
+                    <ol>
+                        <li class="form-step AutofillDropdown PagePostProject-autofill" id="title_autofill_step">
+                            <label for="project-name" class="is-accessibly-hidden">
+                                Project Title
+                            </label>
+                            <input type="text"
+                                class="PagePostProject-form-input large-input focusable-field"
+                                placeholder="e.g. Scrapper script"
+                                id="name_project"
+                                name="name_project"
+                                autofocus
+                                value="">
+                            <div class="form-error">
+                                <span class="fl-icon-warning-sign"></span>
+                                <span class="fl-icon-close"></span>
+                                <span class="error-text"></span>
+                            </div>
+                        </li>
+
+                    </ol>
+            </div>
+        </li>
+
+        <li class="">
+            <div class="NumberedForm-content">
+                <fieldset class="PagePostProject-fieldset">
+                    <legend class="PagePostProject-legend">Tell us more about your project</legend>
+                    <ol>
+                        <li class="form-step">
+                            <div class="PostProjectDescription">
+                                <label for="project-description" class="is-accessibly-hidden">
+                                    Describe your project
+                                </label>
+                                <div class="PostProjectDescription-hintContainer">
+                                    <textarea id="project-description"
+                                        name="description"
+                                        rows="5"
+                                        class="PagePostProject-form-input large-textarea focusable-field"
+                                        placeholder="Describe your project here..."
+                                    ></textarea>
+                                </div>
+                            </div>
+                        </li>
+                    </ol>
+                </fieldset>
+            </div>
+        </li>
+
+        </fieldset>
+                <legend class="PagePostProject-legend">Contact Details</legend>
+                    <ol>
+                        <li class="form-step AutofillDropdown PagePostProject-autofill" id="title_autofill_step">
+                            <label for="project-name" class="is-accessibly-hidden">
+                                Your Name
+                            </label>
+                            <input type="text"
+                                class="PagePostProject-form-input large-input focusable-field"
+                                placeholder="Your name"
+                                id="name"
+                                name="name"
+                                autofocus
+                                value="">
+                            <div class="form-error">
+                                <span class="fl-icon-warning-sign"></span>
+                                <span class="fl-icon-close"></span>
+                                <span class="error-text"></span>
+                            </div>
+                        </li>
+
+
+                        <li class="form-step AutofillDropdown PagePostProject-autofill" id="title_autofill_step">
+                            <label for="project-name" class="is-accessibly-hidden">
+                                Your Email
+                            </label>
+                            <input type="text"
+                                class="PagePostProject-form-input large-input focusable-field"
+                                placeholder="your-email@domain.com"
+                                id="email"
+                                name="email"
+                                autofocus
+                                value="">
+                            <div class="form-error">
+                                <span class="fl-icon-warning-sign"></span>
+                                <span class="fl-icon-close"></span>
+                                <span class="error-text"></span>
+                            </div>
+                        </li>
+
+
+                    </ol>
+                </fieldset>
+
+        <li class="" data-uitest-target="upgradesSection">
+            <div class="NumberedForm-content">
+                <fieldset class="PagePostProject-fieldset">
+                    <div id="PppSubmit" class="PagePostProject-submit">
+
+                        <button id="post-project-submit" type="submit" form="project-form"
+                            class="btn btn-xlarge PagePostProject-submit-btn btn-primary"
+                            data-qtsb-section="PPP" data-qtsb-label="Submit">
+                            Get an offer
+                        </button>
+                    </div>
+                </fieldset>
+
+
+            </div>
+        </li>
+    </ol>
+        </form>
+    </div>
+    </section>
+        </div>
+    </div>
+</section>
+  </body>
+</html>
